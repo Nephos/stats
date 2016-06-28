@@ -8,7 +8,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   CrystalProba:
-    github: pouleta/CrystalProba
+    github: Nephos/CrystalProba
 ```
 
 
@@ -34,7 +34,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it ( https://github.com/pouleta/CrystalProba/fork )
+1. Fork it ( https://github.com/Nephos/CrystalProba/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -42,4 +42,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [pouleta](https://github.com/pouleta) Arthur Poulet - creator, maintainer
+- [Nephos](https://github.com/Nephos) Arthur Poulet - creator, maintainer
