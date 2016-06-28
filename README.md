@@ -1,4 +1,4 @@
-# CrystalProba
+# crystal_proba
 
 ## Installation
 
@@ -8,7 +8,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   CrystalProba:
-    github: Nephos/CrystalProba
+    github: Nephos/crystal_proba
 ```
 
 
@@ -16,7 +16,7 @@ dependencies:
 
 
 ```crystal
-require "CrystalProba"
+require "crystal_proba"
 ```
 
 You should read the specs to understand how it works.
@@ -34,7 +34,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it ( https://github.com/Nephos/CrystalProba/fork )
+1. Fork it ( https://github.com/Nephos/crystal_proba/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
