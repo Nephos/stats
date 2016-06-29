@@ -1,4 +1,5 @@
 module Math
+
   class DomainError < Exception; end
   class SuperiorityError < Exception; end
 

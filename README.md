@@ -1,4 +1,6 @@
-# crystal_proba
+# stats
+
+An expressive implementation of statistical distributions.
 
 ## Installation
 
@@ -7,8 +9,8 @@ Add this to your application's `shard.yml`:
 
 ```yaml
 dependencies:
-  CrystalProba:
-    github: Nephos/crystal_proba
+  Stats:
+    github: Nephos/stats
 ```
 
 
@@ -16,7 +18,7 @@ dependencies:
 
 
 ```crystal
-require "crystal_proba"
+require "stats"
 ```
 
 You should read the specs to understand how it works.

@@ -2,5 +2,5 @@ require "./spec_helper"
 require "./normale_distribution"
 require "./binomial_distribution"
 
-describe CrystalProba do
+describe Stats do
 end
