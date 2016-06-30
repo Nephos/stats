@@ -32,7 +32,7 @@ Math.binomial_distribution(tries: 3, probability: 0.5, success: 1) # => 0.375
 
 ## Contributing
 
-1. Fork it ( https://github.com/Nephos/crystal_proba/fork )
+1. Fork it ( https://github.com/Nephos/stats/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
