@@ -1,9 +1,9 @@
 # stats
 
 An expressive implementation of statistical distributions.
+Compatible with crystal v0.18
 
 ## Installation
-
 
 Add this to your application's `shard.yml`:
 
@@ -16,26 +16,19 @@ dependencies:
 
 ## Usage
 
-
 ```crystal
 require "stats"
 ```
 
 You should read the specs to understand how it works.
 ```crystal
-Math.binomial_distribution(tries: 1, probability: 0.4, success: 1) # => 0.4
 NormaleDistribution::between      standard_deviation: 15, esperance: 100, a: 85, b: 115 # => 0.6826894921370859
-NormaleDistribution::less_than    standard_deviation: 15, esperance: 100, a: 85 # => 0.15865525393145707
-NormaleDistribution::greater_than standard_deviation: 15, esperance: 100, a: 115 # => 0.15865525393145707
-Math.binomial_distribution(tries: 1, probability: 0.5, success: 1) # => 0.5
-Math.binomial_distribution(tries: 2, probability: 0.5, success: 1) # => 0.5
 Math.binomial_distribution(tries: 3, probability: 0.5, success: 1) # => 0.375
 ```
 
-
 ## Development
 
-TODO: Write development instructions here
+- The lib is adapted to be usable with BigInt and BigFloat values
 
 ## Contributing
 
