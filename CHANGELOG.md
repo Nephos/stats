@@ -1,3 +1,7 @@
+# v0.1.5
+- add specs for every function
+- improve file architecture
+
 # v0.1.4
 - fix binomial distribution
 

@@ -20,7 +20,7 @@ class BinomialDistribution
   # @param k [Fixnum] number of test successful.
   # @return [Float] probability
   def distribute(k : Enumerable)
-    k.map{|p| calc(p) }.inject(&:+)
+    k.map{|p| distribute(p) }.reduce{|a, b| a + b}
   end
 
   # @param k [Enumerable] list of number of test successful.
