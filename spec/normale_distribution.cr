@@ -1,4 +1,5 @@
 describe NormaleDistribution do
+
   it "simple instances" do
     NormaleDistribution::Persistant.new
     NormaleDistribution::Persistant.new(standard_deviation: 1).standard_deviation.should eq(1)

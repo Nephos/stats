@@ -1,3 +1,11 @@
-module Math
-  alias NumericValue = Float32 | Float64 | Int32 | Int64
+abstract struct Int
+  alias All = Int::Primitive #| BigInt
+end
+
+abstract struct Float
+  alias All = Float::Primitive #| BigFloat | BigRational
+end
+
+abstract struct Number
+  alias All = Int::All | Float::All
 end
