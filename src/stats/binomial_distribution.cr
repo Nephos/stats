@@ -13,7 +13,7 @@ module Math
 
   def self.coef_binomial(n : Int32 | Int64, k : Int32 | Int64)
     return 0 if n < 0 || k < 0 || n < k
-    return factorial(n) / factorial(k) * factorial(n - k)
+    return factorial(n) / (factorial(k) * factorial(n - k))
   end
 
   # @note if no named parameters are used, then it will try to use the unamed parameters (tries, success, probability)
@@ -54,7 +54,7 @@ class BinomialDistribution
   # @return [Float] probability
   def distribute(k : Int32 | Int64)
     raise Math::SuperiorityError.new "the number of success must be lesser or equal to the number of tries (#{@n})" if k > @n
-    Math.coef_binomial(@n, k) * @p**k * (1 - @p) ** (@n - k)
+    Math.coef_binomial(@n, k) * (@p**k) * ((1 - @p) ** (@n - k))
   end
 
 end

@@ -1,8 +1,11 @@
+# v0.1.4
+- fix binomial distribution
+
 # v0.1.3
-renamed crystal_proba to stats
+- renamed crystal_proba to stats
 
 # v0.1.2
-renamed CrystalProba to crystal_proba
+- renamed CrystalProba to crystal_proba
 
 # v0.1.0
 
