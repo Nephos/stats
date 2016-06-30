@@ -1,7 +1,8 @@
 # v0.1.6
-- improve factorial (handle BigInt)
-- improve distributions (handle BigFloat and BigInt)
-- more tests
+- Improve factorial (handle BigInt)
+- Improve distributions (handle BigFloat and BigInt)
+- Define more specs
+- Improve Normale Distribution parameters (min-max instead of a-b)
 
 # v0.1.5
 - add specs for every function

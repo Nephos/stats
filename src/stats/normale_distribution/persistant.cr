@@ -11,16 +11,16 @@ module NormaleDistribution
       raise ArgumentError.new "standard_deviation must be > 0" unless @standard_deviation > 0.0
     end
 
-    def greater_than(a : Number::All)
-      1.0 - repartition(a)
+    def greater_than(min : Number::All)
+      1.0 - repartition(min)
     end
 
-    def less_than(a : Number::All)
-      repartition a
+    def less_than(max : Number::All)
+      repartition max
     end
 
-    def between(a : Number::All, b : Number::All)
-      repartition(b) - repartition(a)
+    def between(min : Number::All, max : Number::All)
+      repartition(max) - repartition(min)
     end
 
     private def density(t : Number::All)

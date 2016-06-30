@@ -2,16 +2,18 @@ require "./normale_distribution/persistant"
 
 module NormaleDistribution
 
-  def self.between(standard_deviation : Float::All, esperance : Float::All, a : Float::All, b : Float::All)
-    NormaleDistribution::Persistant.new(standard_deviation: standard_deviation, esperance: esperance).between a, b
+  def between(standard_deviation : Number::All, esperance : Number::All, min : Number::All, max : Number::All)
+    NormaleDistribution::Persistant.new(standard_deviation: standard_deviation, esperance: esperance).between min, max
   end
 
-  def self.greater_than(standard_deviation : Float::All, esperance : Float::All, a : Float::All)
-    NormaleDistribution::Persistant.new(standard_deviation: standard_deviation, esperance: esperance).greater_than a
+  def greater_than(standard_deviation : Number::All, esperance : Number::All, min : Number::All)
+    NormaleDistribution::Persistant.new(standard_deviation: standard_deviation, esperance: esperance).greater_than min
   end
 
-  def self.less_than(standard_deviation : Float::All, esperance : Float::All, a : Float::All, b : Float::All)
-    NormaleDistribution::Persistant.new(standard_deviation: standard_deviation, esperance: esperance).less_than a
+  def less_than(standard_deviation : Number::All, esperance : Number::All, max : Number::All)
+    NormaleDistribution::Persistant.new(standard_deviation: standard_deviation, esperance: esperance).less_than max
   end
+
+  extend self
 
 end

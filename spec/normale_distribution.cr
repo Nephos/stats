@@ -1,4 +1,13 @@
 describe NormaleDistribution do
+  it "between" do
+    bet = NormaleDistribution.between standard_deviation: 1, esperance: 0, min: -1, max: 1
+    less = NormaleDistribution.less_than standard_deviation: 1, esperance: 0, max: -1
+    greater = NormaleDistribution.greater_than standard_deviation: 1, esperance: 0, min: 1
+    bet.should eq 1 - less - greater
+  end
+end
+
+describe NormaleDistribution::Persistant do
 
   it "instances" do
     NormaleDistribution::Persistant.new

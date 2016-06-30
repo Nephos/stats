@@ -22,7 +22,7 @@ require "stats"
 
 You should read the specs to understand how it works.
 ```crystal
-NormaleDistribution::between      standard_deviation: 15, esperance: 100, a: 85, b: 115 # => 0.6826894921370859
+NormaleDistribution::between standard_deviation: 15, esperance: 100, min: 85, max: 115 # => 0.6826894921370859
 Math.binomial_distribution(tries: 3, probability: 0.5, success: 1) # => 0.375
 ```
 
