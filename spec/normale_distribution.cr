@@ -1,9 +1,17 @@
 describe NormaleDistribution do
 
-  it "simple instances" do
+  it "instances" do
     NormaleDistribution::Persistant.new
-    NormaleDistribution::Persistant.new(standard_deviation: 1).standard_deviation.should eq(1)
-    NormaleDistribution::Persistant.new(esperance: 1).esperance.should eq(1)
+    NormaleDistribution::Persistant.new(standard_deviation: 12).standard_deviation.should eq(12)
+    NormaleDistribution::Persistant.new(esperance: 14).esperance.should eq(14)
+  end
+
+  it "instances with BigNumber" do
+    n = NormaleDistribution::Persistant.new(
+      standard_deviation: BigInt.new(1),
+      esperance: BigFloat.new(1))
+    n.standard_deviation.should eq(1)
+    n.esperance.should eq(1)
   end
 
   it "QI" do

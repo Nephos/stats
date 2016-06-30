@@ -1,3 +1,8 @@
+# v0.1.6
+- improve factorial (handle BigInt)
+- improve distributions (handle BigFloat and BigInt)
+- more tests
+
 # v0.1.5
 - add specs for every function
 - improve file architecture

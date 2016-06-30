@@ -38,4 +38,9 @@ describe BinomialDistribution do
     b.distribute([2, 1]).should eq 0.75
   end
 
+  it "with BitNumber" do
+    BinomialDistribution.new(
+      BigInt.new(1), BigFloat.new(1)).should be_a(BinomialDistribution)
+  end
+
 end

@@ -19,4 +19,11 @@ describe Math do
     20.times {|i| Math.coef_binomial(i + 1, i + 1).should eq 1}
   end
 
+  it "coef_binomial with BigInt" do
+    Math.coef_binomial(BigInt.new(5), BigInt.new(2)).should eq 10
+    Math.coef_binomial(
+      BigInt.new("fffffffffffffffffffffffffffffffe", 16),
+      BigInt.new("ffffffffffffffffffffffffffffffff", 16)).should eq 0
+  end
+
 end
