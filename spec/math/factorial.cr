@@ -1,5 +1,4 @@
 describe Math do
-
   it "factorial" do
     Math.factorial(0).should eq 1
     Math.factorial(1).should eq 1
@@ -12,8 +11,7 @@ describe Math do
   end
 
   it "factorial bigint" do
-    res = (1..20).to_a.reduce(BigInt.new 1) {|e, i| e * BigInt.new(i) }
+    res = (1..20).to_a.reduce(BigInt.new 1) { |e, i| e * BigInt.new(i) }
     Math.factorial(BigInt.new 20).should eq res
   end
-
 end

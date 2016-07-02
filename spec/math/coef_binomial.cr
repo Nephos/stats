@@ -12,11 +12,11 @@ describe Math do
     Math.coef_binomial(261, 262).should eq 0
     Math.coef_binomial(261, 263).should eq 0
     Math.coef_binomial(261, 26372).should eq 0
-    20.times {|i| Math.coef_binomial(i + 1, i + rand(1..5) + 1).should eq 0}
+    20.times { |i| Math.coef_binomial(i + 1, i + rand(1..5) + 1).should eq 0 }
   end
 
   it "coef binomial tests a = b" do
-    20.times {|i| Math.coef_binomial(i + 1, i + 1).should eq 1}
+    20.times { |i| Math.coef_binomial(i + 1, i + 1).should eq 1 }
   end
 
   it "coef_binomial with BigInt" do
@@ -25,5 +25,4 @@ describe Math do
       BigInt.new("fffffffffffffffffffffffffffffffe", 16),
       BigInt.new("ffffffffffffffffffffffffffffffff", 16)).should eq 0
   end
-
 end

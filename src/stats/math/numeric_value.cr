@@ -3,8 +3,9 @@ abstract struct Int
 end
 
 require "big_float"
+
 abstract struct Float
-  alias All = Float::Primitive | BigFloat #| BigRational
+  alias All = Float::Primitive | BigFloat # | BigRational
 end
 
 abstract struct Number

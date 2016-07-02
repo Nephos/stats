@@ -17,5 +17,4 @@ module Math
   def binomial_distribution(tries : Int::All, success : Int::All, probability : Number::All)
     BinomialDistribution.new(n: tries, p: probability).distribute(success)
   end
-
 end

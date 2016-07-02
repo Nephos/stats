@@ -8,7 +8,6 @@ describe NormaleDistribution do
 end
 
 describe NormaleDistribution::Persistant do
-
   it "instances" do
     NormaleDistribution::Persistant.new
     NormaleDistribution::Persistant.new(standard_deviation: 12).standard_deviation.should eq(12)
@@ -43,5 +42,4 @@ describe NormaleDistribution::Persistant do
     expect_raises { NormaleDistribution::Persistant.new standard_deviation: -1 }
     expect_raises { NormaleDistribution::Persistant.new standard_deviation: 0 }
   end
-
 end

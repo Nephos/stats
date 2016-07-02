@@ -1,5 +1,4 @@
 class BinomialDistribution
-
   @n : Int::All
   @p : Number::All
 
@@ -18,9 +17,9 @@ class BinomialDistribution
 
   # @param k [Fixnum] number of test successful.
   # @return [Float] probability
-  # TODO : Enumerable of Int
+  #  TODO : Enumerable of Int
   def distribute(k : Enumerable)
-    k.map{|p| distribute(p) }.reduce{|a, b| a + b}
+    k.map { |p| distribute(p) }.reduce { |a, b| a + b }
   end
 
   # @param k [Enumerable] list of number of test successful.
@@ -29,5 +28,4 @@ class BinomialDistribution
     raise Math::SuperiorityError.new "the number of success must be lesser or equal to the number of tries (#{@n})" if k > @n
     Math.coef_binomial(@n, k) * (@p**k) * ((1 - @p) ** (@n - k))
   end
-
 end
