@@ -15,6 +15,10 @@ require "big_float"
       BigInt.new(self) / other
     end
 
+    def unsafe_mod(other : BigInt)
+      BigInt.new(self) % other
+    end
+
   end
 {% end %}
 
@@ -28,4 +32,9 @@ struct BigInt
   def /(other : BigFloat)
     self / other
   end
+
+  def unsafe_shr(other : Int::All)
+    BigInt.new(self) ** other
+  end
+
 end
