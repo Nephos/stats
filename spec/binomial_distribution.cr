@@ -1,6 +1,6 @@
 describe Math do
   it "binomial_distribution" do
-    0.0.step(by: 0.1, limit: 1.0) do |proba|
+    0.0.step(by: 0.1, to: 1.0) do |proba|
       Math.binomial_distribution(tries: 1, probability: proba, success: 1).should eq(proba)
     end
     Math.binomial_distribution(tries: 10, probability: 0.2, success: 3).round(3).should eq(0.201)
@@ -35,8 +35,16 @@ describe BinomialDistribution do
     b.distribute([2, 1]).should eq 0.75
   end
 
+  it "with spaces tests" do
+  end
+
   it "with BitNumber" do
-    BinomialDistribution.new(
-      BigInt.new(1), BigFloat.new(1)).should be_a(BinomialDistribution)
+    BinomialDistribution.new(BigInt.new(1), BigFloat.new(1)).should be_a(BinomialDistribution)
+    ((a = BinomialDistribution.new(BigInt.new(10), BigFloat.new(0.02)).distribute(BigInt.new(1)..BigInt.new(10))) > 0.02).should be_true
+    ((b = BinomialDistribution.new(BigInt.new(20), BigFloat.new(0.02)).distribute(BigInt.new(1)..BigInt.new(20))) > 0.02).should be_true
+    ((c = BinomialDistribution.new(BigInt.new(50), BigFloat.new(0.02)).distribute(BigInt.new(1)..BigInt.new(50))) > 0.02).should be_true
+    (b > a).should be_true
+    (c > b).should be_true
+    # p a, b, c
   end
 end

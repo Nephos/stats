@@ -10,6 +10,7 @@ module Math
 
   def coef_binomial(n : Int::All, k : Int::All)
     return 0 if n < 0 || k < 0 || n < k
+    # puts "n=#{n},k=#{k},n-k=#{n - k}, factorial(#{n})=#{factorial(n)}, (factorial(#{n}) * factorial(#{n - k}))=#{(factorial(k) * factorial(n - k))}"
     return factorial(n) / (factorial(k) * factorial(n - k))
   end
 
