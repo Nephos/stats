@@ -16,14 +16,43 @@ dependencies:
 
 ## Usage
 
+### Include it
+
 ```crystal
 require "stats"
 ```
 
-You should read the specs to understand how it works.
+### Normal distribution
+
 ```crystal
-NormaleDistribution::between standard_deviation: 15, esperance: 100, min: 85, max: 115 # => 0.6826894921370859
-Math.binomial_distribution(tries: 3, probability: 0.5, success: 1) # => 0.375
+NormaleDistribution::between # less_than, greater_than
+  standard_deviation: 15,
+  esperance: 100,
+  min: 85,
+  max: 115
+  # => 0.6826894921370859
+```
+
+### Binomial distribution
+
+```crystal
+Math.binomial_distribution(
+  tries: 3,
+  probability: 0.5,
+  success: 1)
+  # => 0.375
+```
+
+### Binomial coefficient
+
+```crystal
+Math.coef_binomial(5, 2) # => 10
+```
+
+### Factorial
+
+```crystal
+Math.factorial(4) # => 24
 ```
 
 ## Development
