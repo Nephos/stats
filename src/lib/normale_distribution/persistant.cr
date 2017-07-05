@@ -3,7 +3,7 @@ class Stats::NormaleDistribution::Persistant(D, E)
   property esperance : E
 
   # Create a new normale distribution
-  def initialize(@standard_deviation = 1.0, @esperance = 0.0)
+  def initialize(@standard_deviation : D = 1.0, @esperance : E = 0.0)
     raise ArgumentError.new "standard_deviation must be > 0" unless @standard_deviation > 0.0
   end
 

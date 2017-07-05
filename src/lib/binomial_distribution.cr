@@ -1,12 +1,12 @@
 class Stats::BinomialDistribution(N, P)
-  @n : N
-  @p : P
+  getter n : N
+  getter p : P
 
   # @param n [Fixnum] number of tries
   # @param p [Float] probability of success
   #
   # NOTE if no probability is defined, the default value will be 0.5
-  def initialize(@n, @p = 0.5)
+  def initialize(@n : N, @p : P = 0.5)
     raise Math::DomainError.new "The argument `p` `#{@p}` is not in greater or equal to 0" if @p < 0.0
     raise Math::DomainError.new "The argument `p` `#{@p}` is not in lesser or equal to 1" if @p > 1.0
     raise Math::DomainError.new "The argument `n` `#{@n}` is not in greater or equal to 0" if @n < 0.0
