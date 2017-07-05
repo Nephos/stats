@@ -1,5 +1,8 @@
 module Math
+  # A factorial(N) = 1x2x3x...xN
   module Factorial(U)
+    extend self
+
     def factorial(n : U)
       raise Math::DomainError.new "The argument must be a natural (out of domain -- factorial)" if n < 0
       return U.new(1) if n == 0

@@ -1,10 +1,11 @@
-class BinomialDistribution
-  @n : Int::All
-  @p : Number::All
+class Stats::BinomialDistribution(N, P)
+  @n : N
+  @p : P
 
   # @param n [Fixnum] number of tries
   # @param p [Float] probability of success
-  # @note if no probability is defined, the default value will be 0.5
+  #
+  # NOTE if no probability is defined, the default value will be 0.5
   def initialize(@n, @p = 0.5)
     raise Math::DomainError.new "The argument `p` `#{@p}` is not in greater or equal to 0" if @p < 0.0
     raise Math::DomainError.new "The argument `p` `#{@p}` is not in lesser or equal to 1" if @p > 1.0
@@ -16,15 +17,14 @@ class BinomialDistribution
   end
 
   # @param k [Fixnum] number of test successful.
-  # @return [Float] probability
-  #  TODO : Enumerable of Int
+  #
+  # TODO : Enumerable of Int
   def distribute(k : Enumerable)
     k.map { |p| distribute(p) }.reduce { |a, b| a + b }
   end
 
   # @param k [Enumerable] list of number of test successful.
-  # @return [Float] probability
-  def distribute(k : Int::All)
+  def distribute(k : Int)
     raise Math::SuperiorityError.new "the number of success must be lesser or equal to the number of tries (#{@n})" if k > @n
     Math.coef_binomial(@n, k) * (@p**k) * ((1 - @p) ** (@n - k))
   end

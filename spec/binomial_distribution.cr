@@ -1,3 +1,5 @@
+include Stats
+
 describe Math do
   it "binomial_distribution" do
     0.0.step(by: 0.1, to: 1.0) do |proba|
@@ -10,23 +12,23 @@ end
 
 describe BinomialDistribution do
   it "initialize" do
-    BinomialDistribution.new(0).should be_a(BinomialDistribution)
-    BinomialDistribution.new(1).should be_a(BinomialDistribution)
-    BinomialDistribution.new(100).should be_a(BinomialDistribution)
-    BinomialDistribution.new(1, 0).should be_a(BinomialDistribution)
-    BinomialDistribution.new(1, 0.5).should be_a(BinomialDistribution)
-    BinomialDistribution.new(1, 1).should be_a(BinomialDistribution)
+    BinomialDistribution(Int32, Float64).new(0).should be_a(BinomialDistribution(Int32, Float64))
+    BinomialDistribution(Int32, Float64).new(1).should be_a(BinomialDistribution(Int32, Float64))
+    BinomialDistribution(Int32, Float64).new(100).should be_a(BinomialDistribution(Int32, Float64))
+    BinomialDistribution(Int32, Int32).new(1, 0).should be_a(BinomialDistribution(Int32, Int32))
+    BinomialDistribution(Int32, Float64).new(1, 0.5).should be_a(BinomialDistribution(Int32, Float64))
+    BinomialDistribution(Int32, Int32).new(1, 1).should be_a(BinomialDistribution(Int32, Int32))
   end
 
   it "initialize errors" do
-    expect_raises { BinomialDistribution.new(-1) }
-    expect_raises { BinomialDistribution.new(0, -1) }
-    expect_raises { BinomialDistribution.new(0, 1.5) }
+    expect_raises { BinomialDistribution(Int32, Float64).new(-1) }
+    expect_raises { BinomialDistribution(Int32, Int32).new(0, -1) }
+    expect_raises { BinomialDistribution(Int32, Float64).new(0, 1.5) }
   end
 
   it "distribute" do
-    b = BinomialDistribution.new(2, 0.5)
-    b.should be_a(BinomialDistribution)
+    b = BinomialDistribution(Int32, Float64).new(2, 0.5)
+    b.should be_a(BinomialDistribution(Int32, Float64))
     b.distribute(0).should eq 0.25
     b.distribute(1).should eq 0.5
     b.distribute(2).should eq 0.25
@@ -39,10 +41,10 @@ describe BinomialDistribution do
   end
 
   it "with BitNumber" do
-    BinomialDistribution.new(BigInt.new(1), BigFloat.new(1)).should be_a(BinomialDistribution)
-    ((a = BinomialDistribution.new(BigInt.new(10), BigFloat.new(0.02)).distribute(BigInt.new(1)..BigInt.new(10))) > 0.02).should be_true
-    ((b = BinomialDistribution.new(BigInt.new(20), BigFloat.new(0.02)).distribute(BigInt.new(1)..BigInt.new(20))) > 0.02).should be_true
-    ((c = BinomialDistribution.new(BigInt.new(50), BigFloat.new(0.02)).distribute(BigInt.new(1)..BigInt.new(50))) > 0.02).should be_true
+    BinomialDistribution(BigInt, BigFloat).new(BigInt.new(1), BigFloat.new(1)).should be_a(BinomialDistribution(BigInt, BigFloat))
+    ((a = BinomialDistribution(BigInt, BigFloat).new(BigInt.new(10), BigFloat.new(0.02)).distribute(BigInt.new(1)..BigInt.new(10))) > 0.02).should be_true
+    ((b = BinomialDistribution(BigInt, BigFloat).new(BigInt.new(20), BigFloat.new(0.02)).distribute(BigInt.new(1)..BigInt.new(20))) > 0.02).should be_true
+    ((c = BinomialDistribution(BigInt, BigFloat).new(BigInt.new(50), BigFloat.new(0.02)).distribute(BigInt.new(1)..BigInt.new(50))) > 0.02).should be_true
     (b > a).should be_true
     (c > b).should be_true
     # p a, b, c
