@@ -46,8 +46,7 @@ Math.binomial_distribution(
 ### Binomial coefficient
 
 ```crystal
-Math.coef_binomial(5, 2) # =>
-10
+Math.coef_binomial(5, 2) # => 10
 ```
 
 ### Factorial
