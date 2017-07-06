@@ -69,6 +69,8 @@ Math.factorial(4) # => 24
 [1, 2, 3].variance.round(4) # => 0.6667
 [1, 2, 3].standard_deviation.round(4) # => 0.8165
 [1, 2, 3].root_mean_square.round(2) # => 2.16
+[2, 32].geometric_mean # => 8
+[40, 60].harmonic_mean.round # => 48
 ```
 
 ## Development
