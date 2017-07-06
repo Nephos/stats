@@ -61,16 +61,15 @@ Math.factorial(4) # => 24
 ```crystal
 90.radian # => (Math::PI / 2)
 (Math::PI / 4) # => 45.0
-
 ```
 
 ### Series & Statistics
 
 ```crystal
-[1.0, 2.0, 3.0].mean # => 2.0
-[1.0, 2.0, 3.0].variance.round(4) # => 0.6667
-[1.0, 2.0, 3.0].standard_deviation.round(4) # => 0.8165
-
+[1, 2, 3].mean # => 2.0
+[1, 2, 3].variance.round(4) # => 0.6667
+[1, 2, 3].standard_deviation.round(4) # => 0.8165
+[1, 2, 3].root_mean_square.round(2) # => 2.16
 ```
 
 ## Development

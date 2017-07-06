@@ -10,4 +10,9 @@ describe Math::Mean do
     [1, 2, 3].mean.should eq 2.0
     [1, 2, -3].mean.should eq 0.0
   end
+
+  it "test quadratic mean" do
+    [1, 2, 3, 2].root_mean_square.round(4).should eq(2.1213)
+    [1, 2, 1, 5, 10, 9, 1, -13, 2].root_mean_square.round(4).should eq(6.549)
+  end
 end
