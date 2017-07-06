@@ -64,6 +64,15 @@ Math.factorial(4) # => 24
 
 ```
 
+### Series & Statistics
+
+```crystal
+[1.0, 2.0, 3.0].mean # => 2.0
+[1.0, 2.0, 3.0].variance.round(4) # => 0.6667
+[1.0, 2.0, 3.0].standard_deviation.round(4) # => 0.8165
+
+```
+
 ## Development
 
 - The lib is adapted to be usable with BigInt and BigFloat values
