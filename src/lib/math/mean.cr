@@ -11,3 +11,7 @@ module Math::Mean
     Math.sqrt map { |e| e ** 2 }.mean
   end
 end
+
+module Enumerable(T)
+  include Math::Mean
+end

@@ -4,14 +4,9 @@ require "big_int"
 require "./factorial"
 
 module Math
-  extend self
+  include Math::Factorial
 
-  {% for num_type in [Int8, Int16, Int32, Int64, UInt8, UInt16, UInt32, UInt64, BigInt] %}
-    # :nodoc:
-    include Math::Factorial({{num_type}})
-  {% end %}
-
-  # computes the binomial coefficient of (n, k)
+  # Computes the binomial coefficient of (n, k)
   def coef_binomial(n : Int, k : Int)
     return 0 if n < 0 || k < 0 || n < k
     # puts "n=#{n},k=#{k},n-k=#{n - k}, factorial(#{n})=#{factorial(n)}, (factorial(#{n}) * factorial(#{n - k}))=#{(factorial(k) * factorial(n - k))}"

@@ -1,8 +1,6 @@
 require "./mean"
 
 module Math::StandardDeviation
-  include Math::Mean
-
   # Squared deviation from the mean
   def variance
     mean = mean()
