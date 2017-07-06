@@ -7,7 +7,7 @@ module Math::Mean
   end
 
   # The square root of mean square
-  def root_mean_square : Float64
+  def quadratic_mean : Float64
     Math.sqrt map { |e| e ** 2 }.mean
   end
 

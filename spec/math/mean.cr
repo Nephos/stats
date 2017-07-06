@@ -12,8 +12,8 @@ describe Math::Mean do
   end
 
   it "test quadratic mean" do
-    [1, 2, 3, 2].root_mean_square.round(4).should eq(2.1213)
-    [1, 2, 1, 5, 10, 9, 1, -13, 2].root_mean_square.round(4).should eq(6.549)
+    [1, 2, 3, 2].quadratic_mean.round(4).should eq(2.1213)
+    [1, 2, 1, 5, 10, 9, 1, -13, 2].quadratic_mean.round(4).should eq(6.549)
   end
 
   it "test geometric mean" do
