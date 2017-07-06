@@ -66,11 +66,12 @@ Math.factorial(4) # => 24
 
 ```crystal
 [1, 2, 3].mean # => 2.0
-[1, 2, 3].variance.round(4) # => 0.6667
-[1, 2, 3].standard_deviation.round(4) # => 0.8165
-[1, 2, 3].quadratic_mean.round(2) # => 2.16
-[2, 32].geometric_mean # => 8
-[40, 60].harmonic_mean.round # => 48
+[1, 2, 3].variance # => 0.6667
+[1, 2, 3].standard_deviation # => 0.8165
+[1, 2, 3].quadratic_mean # => 2.16
+[2, 32].geometric_mean # => 8.0
+[40, 60].harmonic_mean # => 48.0
+[1,2,3,2,1].macd 3 # => [2.0, 2.333, 2.0]
 ```
 
 ## Development
