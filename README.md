@@ -46,13 +46,22 @@ Math.binomial_distribution(
 ### Binomial coefficient
 
 ```crystal
-Math.coef_binomial(5, 2) # => 10
+Math.coef_binomial(5, 2) # =>
+10
 ```
 
 ### Factorial
 
 ```crystal
 Math.factorial(4) # => 24
+```
+
+### Radian and degree
+
+```crystal
+90.radian # => (Math::PI / 2)
+(Math::PI / 4) # => 45.0
+
 ```
 
 ## Development
