@@ -74,6 +74,14 @@ Math.factorial(4) # => 24
 [1,2,3,2,1].macd 3 # => [2.0, 2.333, 2.0]
 ```
 
+### Correlations
+
+```crystal
+[1,2,3,4].covariance [4,2,1,0] # => -1.625
+[1,2,3,4].correlation_coef [1,2,3,3] + 1 > 1.5 # => true
+[1,2,3,4].correlation_coef [-14,14,101,-100] + 1 > 1.5 # => false
+```
+
 ## Development
 
 - The lib is adapted to be usable with BigInt and BigFloat values
