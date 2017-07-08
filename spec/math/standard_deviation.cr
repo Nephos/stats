@@ -18,4 +18,10 @@ describe Math::StandardDeviation do
     [1.0, 2.0, 3.0].variance.round(4).should eq(0.6667)
     [1.0, 2.0, 3.0].standard_deviation.round(4).should eq(0.8165)
   end
+
+  it "test several special case" do
+    arr = [] of Int32
+    arr.variance.should eq 0.0
+    arr.standard_deviation.should eq 0.0
+  end
 end
