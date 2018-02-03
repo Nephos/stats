@@ -41,7 +41,7 @@ describe NormaleDistribution::Persistant do
   end
 
   it "must fail" do
-    expect_raises { NormaleDistribution::Persistant(Int32, Float64).new standard_deviation: -1 }
-    expect_raises { NormaleDistribution::Persistant(Int32, Float64).new standard_deviation: 0 }
+    expect_raises(ArgumentError) { NormaleDistribution::Persistant(Int32, Float64).new standard_deviation: -1 }
+    expect_raises(ArgumentError) { NormaleDistribution::Persistant(Int32, Float64).new standard_deviation: 0 }
   end
 end

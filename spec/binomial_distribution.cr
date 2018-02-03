@@ -21,9 +21,9 @@ describe BinomialDistribution do
   end
 
   it "initialize errors" do
-    expect_raises { BinomialDistribution(Int32, Float64).new(-1) }
-    expect_raises { BinomialDistribution.new(0, -1) }
-    expect_raises { BinomialDistribution.new(0, 1.5) }
+    expect_raises(Math::DomainError) { BinomialDistribution(Int32, Float64).new(-1) }
+    expect_raises(Math::DomainError) { BinomialDistribution.new(0, -1) }
+    expect_raises(Math::DomainError) { BinomialDistribution.new(0, 1.5) }
   end
 
   it "distribute" do
