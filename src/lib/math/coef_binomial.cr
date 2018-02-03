@@ -1,5 +1,5 @@
 # :nodoc:
-require "big_int"
+require "big"
 
 require "./factorial"
 
