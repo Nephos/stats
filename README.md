@@ -1,7 +1,7 @@
 # stats
 
 An expressive implementation of statistical distributions.
-Compatible with crystal v0.24.1
+Compatible with crystal v0.26.1
 
 ## Installation
 
@@ -20,12 +20,13 @@ dependencies:
 
 ```crystal
 require "stats"
+include Stats
 ```
 
 ### Normal distribution
 
 ```crystal
-NormaleDistribution::between # less_than, greater_than
+NormaleDistribution.between # less_than, greater_than
   standard_deviation: 15,
   esperance: 100,
   min: 85,
