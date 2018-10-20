@@ -83,6 +83,40 @@ Math.factorial(4) # => 24
 [1,2,3,4].correlation_coef [-14,14,101,-100] + 1 > 1.5 # => false
 ```
 
+### Median
+
+```crystal
+[1, 2, 5].median # => 2.0
+[42, 1337].median # => 685.5
+```
+
+### Quartiles & Boxplot
+
+```crystal
+[1, 3, 5].first_quartile  # => 2.0 (alias of lower_quartile)
+[1, 3, 5].second_quartile # => 3.0 (alias of median)
+[1, 3, 5].third_quartile  # => 4.0 (alias of upper_quartile)
+```
+
+```crystal
+arr = [-23, -5, 2, 5, 5, 6, 7, 8, 14, 15, 42, 1337]
+
+arr.first_quartile  # => 3.5  (Q1)
+arr.second_quartile # => 6.5  (Q2)
+arr.third_quartile  # => 14.5 (Q3)
+arr.interquartile_range # => 11.0 (alias of iqr) (IQR = Q3 - Q1)
+
+# Tukey's fences with k = 1.5 (default parameter value)
+arr.lower_fence # => -13.0 (Q1 - 1.5 * IQR)
+arr.upper_fence # => 31    (Q3 + 1.5 * IQR)
+arr.lower_outliers # => [-23]
+arr.upper_outliers # => [42, 1337]
+
+# Tukey's fences with k = 3 for "far out" outliers
+arr.upper_fence(3)    # => 47.5 (Q3 + 3 * IQR)
+arr.upper_outliers(3) # => [1337]
+```
+
 ## Development
 
 - The lib is adapted to be usable with BigInt and BigFloat values
