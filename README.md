@@ -1,7 +1,7 @@
 # stats
 
 An expressive implementation of statistical distributions.
-Compatible with crystal v0.26.1
+Compatible with crystal v0.27.0.
 
 ## Installation
 
