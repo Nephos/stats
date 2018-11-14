@@ -5,6 +5,9 @@ module Math::Quartile
     arr.first_quartile.should eq 2.0
     arr.second_quartile.should eq 3.0
     arr.third_quartile.should eq 4.0
+
+    arr.quartiles.should eq [2.0, 3.0, 4.0]
+
     arr.iqr.should eq 2.0
   end
 
@@ -14,6 +17,9 @@ module Math::Quartile
     arr.first_quartile.should eq 25.5
     arr.second_quartile.should eq 40
     arr.third_quartile.should eq 42.5
+
+    arr.quartiles.should eq [25.5, 40, 42.5]
+
     arr.iqr.should eq 17.0
   end
 
@@ -23,6 +29,9 @@ module Math::Quartile
     arr.first_quartile.should eq 15.0
     arr.second_quartile.should eq 37.5
     arr.third_quartile.should eq 40.0
+
+    arr.quartiles.should eq [15, 37.5, 40]
+
     arr.iqr.should eq 25.0
   end
 
@@ -32,6 +41,9 @@ module Math::Quartile
     arr.first_quartile.should eq 31
     arr.second_quartile.should eq 87
     arr.third_quartile.should eq 119
+
+    arr.quartiles.should eq [31, 87, 119]
+
     arr.iqr.should eq 88
   end
 
@@ -42,6 +54,9 @@ module Math::Quartile
     arr.first_quartile.should eq 25.5
     arr.second_quartile.should eq 40
     arr.third_quartile.should eq 42.5
+
+    arr.quartiles.should eq [25.5, 40, 42.5]
+
     arr.iqr.should eq 17
   end
 
@@ -51,6 +66,9 @@ module Math::Quartile
     arr.first_quartile.should eq 3.5
     arr.second_quartile.should eq 6.5
     arr.third_quartile.should eq 14.5
+
+    arr.quartiles.should eq [3.5, 6.5, 14.5]
+
     arr.iqr.should eq 11.0
 
     arr.lower_fence.should eq -13.0
@@ -61,5 +79,6 @@ module Math::Quartile
 
     arr.upper_fence(3).should eq 47.5
     arr.upper_outliers(3).should eq [1337]
+
   end
 end

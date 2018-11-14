@@ -96,6 +96,7 @@ Math.factorial(4) # => 24
 [1, 3, 5].first_quartile  # => 2.0 (alias of lower_quartile)
 [1, 3, 5].second_quartile # => 3.0 (alias of median)
 [1, 3, 5].third_quartile  # => 4.0 (alias of upper_quartile)
+[1, 3, 5].quartiles       # => [2.0, 3.0, 4.0] ([Q1, Q2, Q3])
 ```
 
 ```crystal
