@@ -118,6 +118,12 @@ arr.upper_fence(3)    # => 47.5 (Q3 + 3 * IQR)
 arr.upper_outliers(3) # => [1337]
 ```
 
+### frequency_of
+
+```crystal
+[0, 1, 2, 3].frequency_of(0) # => 0.25 (amount of X among the population, divided by the size of the population)
+```
+
 ## Development
 
 - The lib is adapted to be usable with BigInt and BigFloat values
