@@ -118,10 +118,11 @@ arr.upper_fence(3)    # => 47.5 (Q3 + 3 * IQR)
 arr.upper_outliers(3) # => [1337]
 ```
 
-### frequency_of
+### Frequency
 
 ```crystal
 [0, 1, 2, 3].frequency_of(0) # => 0.25 (amount of X among the population, divided by the size of the population)
+[0, 0, 1, 2, 3].all_frequencies # => { 0 => 0.4, 1 => 0.2, 2 => 0.2, 3 => 0.2}
 ```
 
 ## Development
