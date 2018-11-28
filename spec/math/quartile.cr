@@ -79,6 +79,5 @@ module Math::Quartile
 
     arr.upper_fence(3).should eq 47.5
     arr.upper_outliers(3).should eq [1337]
-
   end
 end

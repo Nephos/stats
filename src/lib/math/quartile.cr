@@ -1,5 +1,5 @@
 # There are several methods for computing the quartiles of an array.
-# 
+#
 # This library utilizes the method proposed by John Tukey
 # https://en.wikipedia.org/wiki/Quartile#Method_2
 #

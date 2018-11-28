@@ -2,10 +2,10 @@ FREQ_LIMIT = 100
 
 describe Math::Frequency do
   it "test trivia" do
-    ([]of Int32).frequency_of(0).should eq 0.0
+    ([] of Int32).frequency_of(0).should eq 0.0
     [0, 1, 2, 3].frequency_of(0).should eq 0.25
     [0, 0, 1, 2, 3].frequency_of(0).should eq 0.40
-    [0, 0, 1, 2, 3].all_frequencies.should eq({ 0 => 0.4, 1 => 0.2, 2 => 0.2, 3 => 0.2 })
+    [0, 0, 1, 2, 3].all_frequencies.should eq({0 => 0.4, 1 => 0.2, 2 => 0.2, 3 => 0.2})
     # allfreq1 = [0, 0, 1, 2, 3].all_frequencies(2)
     # allfreq1[1].should eq 0.4
     # allfreq1.size.should eq 2
@@ -29,6 +29,6 @@ describe Math::Frequency do
       (arr.frequency_of(0) <= arr_more.frequency_of(0)).should be_true
     end
 
-    [0, 0, 0, 0, 1, 1, 1, 2, 2, 3].all_frequencies.should eq({ 0 => 0.4, 1 => 0.3, 2 => 0.2, 3 => 0.1 })
+    [0, 0, 0, 0, 1, 1, 1, 2, 2, 3].all_frequencies.should eq({0 => 0.4, 1 => 0.3, 2 => 0.2, 3 => 0.1})
   end
 end

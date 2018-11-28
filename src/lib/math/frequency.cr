@@ -7,7 +7,7 @@ module Math::Frequency(T)
   def all_frequencies : Hash(T, Float64)
     values = to_set
     frequencies = Hash(T, Float64).new(0.0f64, values.size)
-    each { |value| frequencies[value] += 1  }
+    each { |value| frequencies[value] += 1 }
     frequencies.each { |k, _| frequencies[k] = frequencies[k] / size }
     frequencies
   end
