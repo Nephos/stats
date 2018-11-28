@@ -127,7 +127,7 @@ arr.upper_outliers(3) # => [1337]
 
 ## Development
 
-- The lib is adapted to be usable with BigInt and BigFloat values
+- The lib should take care of "big" numbers
 
 ## Contributing
 
