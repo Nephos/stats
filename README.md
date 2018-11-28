@@ -121,7 +121,7 @@ arr.upper_outliers(3) # => [1337]
 ### Frequency
 
 ```crystal
-[0, 1, 2, 3].frequency_of(0) # => 0.25 (amount of X among the population, divided by the size of the population)
+[0, 1, 2, 3].frequency_of(0) # => 0.25 (amount of X in the population, by the size of the population)
 [0, 0, 1, 2, 3].all_frequencies # => { 0 => 0.4, 1 => 0.2, 2 => 0.2, 3 => 0.2}
 ```
 
