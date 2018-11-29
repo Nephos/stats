@@ -1,3 +1,5 @@
+require "big"
+
 describe Math::Mean do
   it "test several basic mean special case" do
     arr = ([] of Int32)
@@ -15,6 +17,11 @@ describe Math::Mean do
   it "test mean on Array(Int32)" do
     [1, 2, 3].mean.should eq 2.0
     [1, 2, -3].mean.should eq 0.0
+  end
+
+  it "test mean on big" do
+    [BigInt.new(1), 2, 3].mean.should eq 2.0
+    [BigInt.new(1), BigInt.new(2), BigFloat.new(-3)].mean.should eq 0.0
   end
 
   it "test quadratic mean" do

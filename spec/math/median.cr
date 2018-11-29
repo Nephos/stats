@@ -1,3 +1,5 @@
+require "big"
+
 describe Math::Median do
   it "test trivia" do
     arr = ([] of Int32)
@@ -12,5 +14,10 @@ describe Math::Median do
     [2, 5, 1].median.should eq 2.0
 
     [4, 1, 1, 1, 2].median.should eq 1.0
+  end
+
+  it "test big" do
+    [BigInt.new(1.0), 2.0].median.should eq 1.5
+    [BigInt.new(1.0), BigFloat.new(2.0)].median.should eq 1.5
   end
 end

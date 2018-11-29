@@ -1,3 +1,5 @@
+require "big"
+
 module Math::Quartile
   it "trivial" do
     arr = [1, 3, 5]
@@ -10,6 +12,19 @@ module Math::Quartile
 
     arr.iqr.should eq 2.0
   end
+
+  # TODO
+  # it "big" do
+  #   arr = [BigInt.new(1), BigFloat.new(3), 5]
+  #
+  #   arr.first_quartile.should eq 2.0
+  #   arr.second_quartile.should eq 3.0
+  #   arr.third_quartile.should eq 4.0
+  #
+  #   arr.quartiles.should eq [2.0, 3.0, 4.0]
+  #
+  #   arr.iqr.should eq 2.0
+  # end
 
   it "odd size input" do
     arr = [6, 7, 15, 36, 39, 40, 41, 42, 43, 47, 49]

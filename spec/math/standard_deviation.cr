@@ -9,6 +9,16 @@ describe Math::StandardDeviation do
     arr.standard_deviation.should eq(standard_deviation)
   end
 
+  it "test big" do
+    arr = [BigInt.new(1), BigFloat.new(2), 3, 4.0, 4]
+    mean = (4 + 4 + 3 + 2 + 1) / 5.0
+    variance = ((4 - mean)**2 + (4 - mean)**2 + (3 - mean)**2 + (2 - mean)**2 + (1 - mean)**2) / 5.0
+    standard_deviation = Math.sqrt(variance)
+    arr.mean.should eq(mean)
+    arr.variance.should eq(variance)
+    arr.standard_deviation.should eq(standard_deviation)
+  end
+
   it "test standard deviation without explanations" do
     arr = [1, 5, 23, 2, 0, 0, 1]
     arr.mean.round(2).should eq 4.57
