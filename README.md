@@ -92,6 +92,8 @@ Math.factorial(4) # => 24
 
 ### Quartiles & Boxplot
 
+*Note: not big compatible yet*
+
 ```crystal
 [1, 3, 5].first_quartile  # => 2.0 (alias of lower_quartile)
 [1, 3, 5].second_quartile # => 3.0 (alias of median)
