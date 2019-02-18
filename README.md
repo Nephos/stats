@@ -1,3 +1,5 @@
+**Migrated to <https://git.sceptique.eu/Sceptique/stats>**
+
 # stats
 
 An expressive implementation of statistical distributions.
@@ -10,7 +12,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   stats:
-    github: Nephos/stats
+    git: https://git.sceptique.eu/Sceptique/stats
 ```
 
 
