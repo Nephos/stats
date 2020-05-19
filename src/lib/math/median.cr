@@ -1,5 +1,5 @@
 module Math::Median
-  def median
+  def median : Number
     return 0.0_f64 if empty?
     sorted = sort
     size = size()
