@@ -3,7 +3,7 @@
 # stats
 
 An expressive implementation of statistical distributions.
-Compatible with crystal v0.27.0.
+Compatible with crystal v0.34.0.
 
 ## Installation
 
@@ -94,8 +94,6 @@ Math.factorial(4) # => 24
 
 ### Quartiles & Boxplot
 
-*Note: not big compatible yet*
-
 ```crystal
 [1, 3, 5].first_quartile  # => 2.0 (alias of lower_quartile)
 [1, 3, 5].second_quartile # => 3.0 (alias of median)
@@ -144,3 +142,4 @@ arr.upper_outliers(3) # => [1337]
 ## Contributors
 
 - [Nephos](https://github.com/Nephos) Arthur Poulet - creator, maintainer
+- [pyrokar](https://github.com/pyrokar) Gunter Solf - contributer

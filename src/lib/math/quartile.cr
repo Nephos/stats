@@ -4,57 +4,57 @@
 # https://en.wikipedia.org/wiki/Quartile#Method_2
 #
 module Math::Quartile
-  def lower_quartile : Float64
-    return 0.0_f64 if empty?
+  def lower_quartile
+    return 0 if empty?
     m = self.median
     lower_half = self.select { |i| i <= m }
     lower_half.median
   end
 
   # alias
-  def first_quartile : Float64
+  def first_quartile
     lower_quartile
   end
 
   # alias
-  def second_quartile : Float64
+  def second_quartile
     median
   end
 
-  def upper_quartile : Float64
-    return 0.0_f64 if empty?
+  def upper_quartile
+    return 0 if empty?
     m = self.median
     upper_half = self.select { |i| i >= m }
     upper_half.median
   end
 
   # alias
-  def third_quartile : Float64
+  def third_quartile
     upper_quartile
   end
 
-  def quartiles : Array(Float64)
+  def quartiles
     [first_quartile, second_quartile, third_quartile]
   end
 
-  def iqr : Float64
+  def iqr
     third_quartile - first_quartile
   end
 
   # alias
-  def interquartile_range : Float64
+  def interquartile_range
     iqr
   end
 
-  def lower_fence(k : Number = 1.5) : Float64
+  def lower_fence(k : Number = 1.5)
     lower_quartile - k * iqr
   end
 
-  def upper_fence(k : Number = 1.5) : Float64
+  def upper_fence(k : Number = 1.5)
     upper_quartile + k * iqr
   end
 
-  def lower_outliers(k : Number = 1.5) : Array
+  def lower_outliers(k : Number = 1.5)
     lf = lower_fence k
     self.select { |i| i < lf }
   end

@@ -14,9 +14,9 @@ module Math::MACD
   # MACD computation if n is odd
   private def macd_odd(n)
     map_with_index do |_, i|
-      next if i < n / 2
-      next if i + n / 2 >= size
-      range = (i - n / 2)..(i + n / 2)
+      next if i < n // 2
+      next if i + n // 2 >= size
+      range = (i - n // 2)..(i + n // 2)
       self[range].mean
     end
   end
